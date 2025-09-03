@@ -11,7 +11,7 @@ const findAll = () => {
 }
 
 //Função para buscar um usuario por ID
-const findby = (id) => {
+const findById = (id) => {
     return users.find(user => user.id === id);
 
 }
@@ -20,7 +20,7 @@ const findby = (id) => {
 const create = (newUser) => {
     const newId = users.length > 0 ? users[users.length - 1].id + 1 : 1;
     const userWithID = {id: newId, ...newUser }
-    user.push(userWithID);
+    users.push(userWithID);
     return userWithID;
 
 }
@@ -29,6 +29,5 @@ const create = (newUser) => {
 module.exports = {
     findAll,
     findById,
-    create
-    
+    create    
 }
